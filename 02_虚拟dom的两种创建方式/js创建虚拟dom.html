@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>hello react</title>
+</head>
+<body>
+<div id="root"></div>
+
+<!--优先引入development.js-->
+<script type="text/javascript" src="../js/react.development.js"></script>
+<script type="text/javascript" src="../js/react-dom.development.js"></script>
+<!--<script type="text/javascript" src="../js/babel.min.js"></script>-->
+
+<script type="text/javascript">
+    const VDOM = React.createElement('h1', {id: 'title'}, 'hello,react');
+    ReactDOM.render(VDOM, document.getElementById("root"));
+    console.log('虚拟dom', VDOM);
+    const TDOM = document.getElementById('demo') ;
+    console.log('truedom',)
+    // console.log(typeof VDOM)
+    // console.log(VDOM instanceof Object);
+</script>
+</body>
+</html>

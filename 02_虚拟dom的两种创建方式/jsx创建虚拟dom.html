@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>hello react</title>
+</head>
+<body>
+<div id="root"></div>
+
+<!--优先引入development.js-->
+<script type="text/javascript" src="../js/react.development.js"></script>
+<script type="text/javascript" src="../js/react-dom.development.js"></script>
+<script type="text/javascript" src="../js/babel.min.js"></script>
+
+<!--<script src="https://unpkg.com/react@16/umd/react.development.js"></script>-->
+<!--<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>-->
+<!--&lt;!&ndash; 生产环境中不建议使用 &ndash;&gt;-->
+<!--<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>-->
+<script type="text/babel">
+    const VDOM = <h1 id="title">hello.react</h1>;
+    ReactDOM.render(VDOM, document.getElementById("root"));
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>hello react</title>
+</head>
+<style>
+    .temp {
+        background-color: aqua;
+    }
+</style>
+<body>
+<div id="root"></div>
+
+<!--优先引入development.js-->
+<script type="text/javascript" src="../js/react.development.js"></script>
+<script type="text/javascript" src="../js/react-dom.development.js"></script>
+<script type="text/javascript" src="../js/babel.min.js"></script>
+
+<script type="text/babel">
+    const myid = 'atsss';
+    const word = 'hello';
+    // 定义虚拟dom时，不要写引号
+    // 标签中混入js表达式要加上{}
+    //通过{}的方式将js变量带入到jsx中
+    //通过classname指定样式类
+    //内联样式必须用{{'key':'value'}}的形式
+    // 标签必须闭合
+    // 标签首字母，小写开头转为html的标签，若html没有，报错
+    //标签首字母，大写开头认为时组件，找不到就报错
+    const VDOM = (
+        // 必须且只能有一个根标签
+        <div>
+            <h1 className="temp" id={myid}><span style={{'color': 'green'}}>{word}</span></h1>
+            <h1 className="temp" id={myid.toUpperCase()}><span style={{'color': 'blue'}}>{word}</span></h1>
+            <input></input>
+        </div>
+    );
+    //渲染一个新的虚拟dom到react
+    ReactDOM.render(VDOM, document.getElementById('root'));
+</script>
+</body>
+</html>
